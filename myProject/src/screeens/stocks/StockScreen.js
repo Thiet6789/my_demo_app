@@ -7,6 +7,7 @@ import {
     FlatList,
     Alert,
     TextInput,
+    SafeAreaView
 } from 'react-native'
 import Header from "../../components/Header";
 import { Ionicons } from '@expo/vector-icons';
@@ -19,7 +20,7 @@ const StockScreen = ({ navigation }) => {
     const stocks = useSelector(state => state.stocks.stocks);
 
     return (
-        <View style={{ flex: 1 , backgroundColor: Color.background}}>
+        <SafeAreaView style={{ flex: 1 , backgroundColor: Color.background}}>
             <Header
                 title="Giao dịch"
                 onBackPress={() => navigation.goBack()}
@@ -67,7 +68,7 @@ const StockScreen = ({ navigation }) => {
                 contentContainerStyle={{ paddingBottom: 16 }}
             />
 
-        </View>
+        </SafeAreaView>
     )
 }
 export default StockScreen;

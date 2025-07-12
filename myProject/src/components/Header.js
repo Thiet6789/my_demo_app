@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet ,SafeAreaView} from "react-native";
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import Color from "../themes/Color";
 
 const Header = ({ title, onBackPress, onHomePress, textColor = Color.blue }) => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             {/* Quay lại */}
             <TouchableOpacity onPress={onBackPress}>
                 <Ionicons name="arrow-back" size={24} color={textColor} />
@@ -16,7 +16,7 @@ const Header = ({ title, onBackPress, onHomePress, textColor = Color.blue }) => 
             <TouchableOpacity onPress={onHomePress}>
                 <Ionicons name="home-outline" size={24} color={textColor}/>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -25,11 +25,9 @@ export default Header;
 const styles = StyleSheet.create({
     container: {
       height: 60,
-      paddingHorizontal: 16,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      marginTop:30,
     },
     title: {
       fontSize: 16,

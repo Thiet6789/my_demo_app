@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, Touchable, StyleSheet, Image, FlatList } from "react-native";
+import { View, Text, Touchable, StyleSheet, Image, FlatList ,SafeAreaView} from "react-native";
 import Header from "../../components/Header";
 import Color from "../../themes/Color";
 import { Ionicons } from '@expo/vector-icons';
 
 const ProfileScreen = ({ navigator }) => {
     return (
-        <View style={{ flex: 1, backgroundColor: Color.background }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: Color.background }}>
             <Header
                 title="Hồ sơ người dùng"
             />
@@ -49,7 +49,7 @@ const ProfileScreen = ({ navigator }) => {
                     </View>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({

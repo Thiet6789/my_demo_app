@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet ,SafeAreaView} from 'react-native';
 
 const TabSelector = ({ tabs, onTabChange }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -10,7 +10,7 @@ const TabSelector = ({ tabs, onTabChange }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {tabs.map((tab, index) => {
         const isActive = index === activeTab;
         return (
@@ -26,7 +26,7 @@ const TabSelector = ({ tabs, onTabChange }) => {
           </TouchableOpacity>
         );
       })}
-    </View>
+    </SafeAreaView>
   );
 };
 

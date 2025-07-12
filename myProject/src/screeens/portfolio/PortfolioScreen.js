@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Touchable, StyleSheet , FlatList} from "react-native";
+import { View, Text, Touchable, StyleSheet , FlatList,SafeAreaView} from "react-native";
 import Header from "../../components/Header";
 import Color from "../../themes/Color";
 import TabSelector from "../../components/TabSelector";
@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 const PortfolioScreen = ({ navigator }) => {
     const stocks = useSelector(state => state.stocks.stocks);
     return (
-        <View style={{ flex:1 , backgroundColor: Color.background,}}>
+        <SafeAreaView style={{ flex:1 , backgroundColor: Color.background,}}>
             <Header
                 title="Danh mục đầu tư "
             />
@@ -58,7 +58,7 @@ const PortfolioScreen = ({ navigator }) => {
                 contentContainerStyle={{ paddingBottom: 16 }}
             />
 
-        </View>
+        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({

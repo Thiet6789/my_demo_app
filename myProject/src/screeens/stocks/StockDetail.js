@@ -7,6 +7,7 @@ import {
     TouchableWithoutFeedback,
     TextInput,
     TouchableOpacity,
+    SafeAreaView
 } from 'react-native';
 import React, { useState } from 'react';
 import { XAxis } from 'react-native-svg-charts';
@@ -66,7 +67,7 @@ const StockDetail = ({ route, navigation }) => {
     );
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             {/* Header */}
             <View style={styles.header}>
                 <Header
@@ -132,7 +133,7 @@ const StockDetail = ({ route, navigation }) => {
                     <Text style={{fontWeight:'bold' ,color: Color.white }}>BUY</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
