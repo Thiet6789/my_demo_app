@@ -67,7 +67,6 @@ const StockDetail = ({ route, navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
-      <View style={styles.header}>
         {/* Card */}
         <CardStock
           name={stock.name}
@@ -77,7 +76,6 @@ const StockDetail = ({ route, navigation }) => {
           changePercent={stock.changePercent}
           chartData={stock.chartData}
         />
-      </View>
       {/* text chart */}
       <View style={styles.chart}>
         <Text style={{ fontSize: 16, color: "#323236" }}>Biểu đồ</Text>
@@ -144,7 +142,7 @@ const StockDetail = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Color.background,
+    backgroundColor: Color.white,
   },
   header: {
     backgroundColor: Color.blue,

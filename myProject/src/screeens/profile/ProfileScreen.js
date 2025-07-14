@@ -14,7 +14,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 const ProfileScreen = ({ navigator }) => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Color.background }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Color.white }}>
       {/* Title */}
       <View style={styles.title}>
         <Image

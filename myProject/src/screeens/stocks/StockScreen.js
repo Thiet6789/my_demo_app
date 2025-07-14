@@ -22,7 +22,7 @@ const StockScreen = ({ navigation }) => {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: Color.background,
+        backgroundColor: Color.white,
         paddingTop: 10,
       }}
     >
