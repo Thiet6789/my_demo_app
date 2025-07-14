@@ -13,10 +13,10 @@ import Colors from "../../src/themes/Color";
 
 const HeaderTab = ({
   children,
-  leftBtnIcon,
-  rightBtnIcon,
-  handleLeftBtn,
-  handleRightBtn,
+  leftBtnIcon = null,
+  rightBtnIcon = null,
+  handleLeftBtn = () => {},
+  handleRightBtn = () => {},
 }) => {
   return (
     <SafeAreaView style={styles.safeContainer}>

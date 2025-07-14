@@ -78,6 +78,7 @@ const DetailAccountScreen = () => {
             </Pressable>
           </View>
           <View style={styles.separator} />
+          {/* Flatlist Transactions */}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -166,18 +167,17 @@ const styles = StyleSheet.create({
   btnContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 5,
-    margin: 10,
+    paddingHorizontal: 10,
     marginTop: 20,
   },
 
   btn: {
-    width: 120,
-    height: 120,
+    width: 110,
+    height: 110,
     backgroundColor: "#fff",
     borderRadius: 10,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingHorizontal: 15,
+    paddingVertical: 5,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 18,
     color: Colors.black,
-    marginTop: 15,
+    marginTop: 5,
   },
 
   btnIcon: {
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: Colors.textSecondary,
+    backgroundColor: Colors.gray,
     width: "100%",
     alignSelf: "center",
     marginTop: 10,
