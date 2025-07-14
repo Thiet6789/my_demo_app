@@ -37,9 +37,7 @@ function AccountStack() {
           header: ({ navigation }) => (
             <HeaderTab
               handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => navigation.navigate("Home")}
               leftBtnIcon="chevron-left"
-              rightBtnIcon="house"
             >
               Tài khoản
             </HeaderTab>
@@ -54,9 +52,7 @@ function AccountStack() {
           header: ({ navigation }) => (
             <HeaderTab
               handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => navigation.navigate("Home")}
               leftBtnIcon="chevron-left"
-              rightBtnIcon="house"
             >
               Chi tiết tài khoản
             </HeaderTab>
@@ -78,9 +74,7 @@ function TransferStack() {
           header: ({ navigation }) => (
             <HeaderTab
               handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => navigation.navigate("Home")}
               leftBtnIcon="chevron-left"
-              rightBtnIcon="house"
             >
               Chuyển tiền
             </HeaderTab>
@@ -95,9 +89,7 @@ function TransferStack() {
           header: ({ navigation }) => (
             <HeaderTab
               handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => {}}
               leftBtnIcon="chevron-left"
-              rightBtnIcon=""
             >
               Chuyển tiền đến số tài khoản
             </HeaderTab>
@@ -118,12 +110,7 @@ function HomeStack() {
         component={BankScreen}
         options={{
           header: ({ navigation }) => (
-            <HeaderTab
-              handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => {}}
-              leftBtnIcon="bars"
-              rightBtnIcon="bell"
-            >
+            <HeaderTab handleRightBtn={() => {}} rightBtnIcon="bell">
               Trang chủ
             </HeaderTab>
           ),
@@ -157,12 +144,7 @@ function StockStack() {
         component={StockScreen}
         options={{
           header: ({ navigation }) => (
-            <HeaderTab
-              handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => {}}
-              leftBtnIcon="bars"
-              rightBtnIcon="bell"
-            >
+            <HeaderTab handleRightBtn={() => {}} rightBtnIcon="bell">
               Giao dịch
             </HeaderTab>
           ),
@@ -176,9 +158,7 @@ function StockStack() {
           header: ({ navigation }) => (
             <HeaderTab
               handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => navigation.navigate("Home")}
               leftBtnIcon="chevron-left"
-              rightBtnIcon="house"
             >
               Chi tiết mã chứng khoán
             </HeaderTab>
@@ -198,12 +178,7 @@ function Portfolio() {
         component={PortfolioScreen}
         options={{
           header: ({ navigation }) => (
-            <HeaderTab
-              handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => {}}
-              leftBtnIcon="bars"
-              rightBtnIcon="bell"
-            >
+            <HeaderTab handleRightBtn={() => {}} rightBtnIcon="bell">
               Đầu tư
             </HeaderTab>
           ),
@@ -222,12 +197,7 @@ function Profile() {
         component={ProfileScreen}
         options={{
           header: ({ navigation }) => (
-            <HeaderTab
-              handleLeftBtn={() => navigation.goBack()}
-              handleRightBtn={() => {}}
-              leftBtnIcon="bars"
-              rightBtnIcon="bell"
-            >
+            <HeaderTab handleRightBtn={() => {}} rightBtnIcon="bell">
               Tài khoản
             </HeaderTab>
           ),

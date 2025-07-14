@@ -60,6 +60,7 @@ const TransferScreen = ({ navigation }) => {
               style={styles.searchInput}
               placeholder="Tìm kiếm theo tên, số tài khoản"
             />
+            {/* Flatlist Người thụ hưởng đã lưu, gần đây */}
           </View>
         </View>
       </ScrollView>
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   headerContainer: {
+    marginTop: 5,
     padding: 10,
     marginBottom: 10,
     backgroundColor: Colors.primaryLight,
@@ -91,15 +93,15 @@ const styles = StyleSheet.create({
   btnContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 10,
-    paddingVertical: 30,
+    paddingHorizontal: 5,
+    paddingVertical: 20,
   },
   btn: {
-    width: 120,
-    height: 120,
+    width: 110,
+    height: 110,
     backgroundColor: "#fff",
     borderRadius: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     paddingVertical: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -108,11 +110,13 @@ const styles = StyleSheet.create({
     elevation: 4, // cho Android},
   },
   btnText: {
-    marginTop: 10,
+    marginTop: 5,
+    marginLeft: 5,
     fontSize: 18,
     paddingHorizontal: 5,
   },
   btnIcon: {
+    marginLeft: 5,
     color: Colors.primary,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -134,8 +138,8 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     paddingHorizontal: 10,
-    marginLeft: 10,
-    width: 350,
+    marginLeft: 15,
+    width: 320,
     height: 60,
     backgroundColor: Colors.white,
     borderRadius: 20,
