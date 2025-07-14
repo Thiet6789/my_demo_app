@@ -19,7 +19,7 @@ const PortfolioScreen = ({ navigator }) => {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: Color.background,
+        backgroundColor: Color.white,
         paddingTop: 20,
       }}
     >
