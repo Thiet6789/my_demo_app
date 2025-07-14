@@ -1,42 +1,46 @@
 import React from "react";
-import { 
+import {
     View,
     Text,
     StyleSheet,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    SafeAreaView
 } from "react-native";
 import LineChartStock from "./ChartLine";
-export default function CardStockUser({name, symbol, price, change, changePercent, chartData,onPress ,avatar}) {
+export default function CardStockUser({ name, symbol, price, change, changePercent, chartData, onPress, avatar }) {
     const isUp = change > 0
     return (
-        <TouchableOpacity onPress={onPress}>
-                    <View style={styles.card}>
-            {/* Avatar bên trái */}
-            <View style={styles.avatarContainer}>
-                <View style={styles.avatar}>
-                    <Text style={styles.avatarText}>
-                        {name ? name.charAt(0) : 'N'}
-                    </Text>
+        <SafeAreaView>
+            <TouchableOpacity onPress={onPress}>
+                <View style={styles.card}>
+                    {/* Avatar bên trái */}
+                    <View style={styles.avatarContainer}>
+                        <View style={styles.avatar}>
+                            <Text style={styles.avatarText}>
+                                {name ? name.charAt(0) : 'N'}
+                            </Text>
+                        </View>
+                    </View>
+
+                    {/* Thông tin cổ phiếu */}
+                    <View style={styles.left}>
+                        <Text style={styles.name}>{name}</Text>
+                        <Text style={styles.symbol}>{symbol}</Text>
+                    </View>
+                    <LineChartStock data={chartData} />
+
+                    {/* Giá và thay đổi */}
+                    <View style={styles.right}>
+                        <Text style={styles.price}>${price.toFixed(2)}</Text>
+                        <Text style={[styles.change, { color: isUp ? '#4CAF50' : '#F44336' }]}>
+                            {isUp ? '+' : ''}{change.toFixed(2)} ({changePercent}%)
+                        </Text>
+                    </View>
                 </View>
-            </View>
-            
-            {/* Thông tin cổ phiếu */}
-            <View style={styles.left}>
-                <Text style={styles.name}>{name}</Text>
-                <Text style={styles.symbol}>{symbol}</Text>
-            </View>
-            <LineChartStock data={chartData}/>
-            
-            {/* Giá và thay đổi */}
-            <View style={styles.right}>
-                <Text style={styles.price}>${price.toFixed(2)}</Text>
-                <Text style={[styles.change, { color: isUp ? '#4CAF50' : '#F44336' }]}>
-                    {isUp ? '+' : ''}{change.toFixed(2)} ({changePercent}%)
-                </Text>
-            </View>
-        </View>
-        </TouchableOpacity>
+            </TouchableOpacity>
+
+        </SafeAreaView>
     )
 }
 

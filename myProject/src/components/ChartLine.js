@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet ,SafeAreaView} from "react-native";
 import { LineChart, Grid } from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
 
@@ -8,7 +8,7 @@ export default function LineChartStock({ data }) {
     const strokeColor = isIncreasing ? '#4CAF50' : '#F44336';
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <LineChart
                 style={{ height: 50, width: 100 }}
                 data={data}
@@ -18,7 +18,7 @@ export default function LineChartStock({ data }) {
             >
                 <Grid />
             </LineChart>
-        </View>
+        </SafeAreaView>
     );
 }
 
